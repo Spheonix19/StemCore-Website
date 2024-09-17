@@ -1,0 +1,643 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: #f9f9f9; /* Soft light background */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #0056b3; /* Darker blue to match the logo */
+    color: #fff; /* White text color for contrast */
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center;
+    gap: 1rem; /* Space between items */
+}
+
+/* Navbar Links Styling */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-link {
+    color: #fff; /* White color for nav links */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem; /* Increased padding for better click area */
+    background: #007bff; /* Square background color */
+    border-radius: 8px; /* Rounded corners for the squares */
+    transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transitions */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+}
+
+.navbar .nav-link:hover {
+    background: #0056b3; /* Darker blue on hover */
+    color: #e0e0e0; /* Lighter text color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow effect */
+}
+
+/* Hero Section Styling */
+.hero {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    color: #333; /* Dark text color */
+    padding: 6rem 0; /* Increased padding for better space */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+    animation: fadeInUp 1.5s ease-out;
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    margin-bottom: 2rem; /* Space between logo and heading */
+}
+
+.logo-img {
+    max-width: 400px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Hero Section Button */
+.hero .btn {
+    background: #007bff; /* Friendly blue color */
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+.hero .btn:hover {
+    background: #0056b3; /* Darker blue color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow effect */
+}
+
+/* General Section Styling */
+.section {
+    padding: 2rem 1rem; /* Adjusted padding */
+    background: #f9f9f9; /* Light background */
+    border-radius: 15px; /* Curvy corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+    margin-bottom: 2rem;
+    position: relative; /* Ensure proper stacking of content */
+    overflow: hidden; /* Ensure the rounded corners are effective */
+}
+
+/* Title Styling */
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #0056b3; /* Darker blue for titles */
+}
+
+/* Subject Boxes Container */
+.subject-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid layout */
+    gap: 1rem; /* Space between boxes */
+    justify-content: center;
+}
+
+/* Individual Subject Box Styling */
+.subject-box {
+    background: #ffffff; /* White background */
+    color: #333;
+    padding: 1rem;
+    border-radius: 10px; /* Curvy corners for subject boxes */
+    border: 2px solid #007bff; /* Blue border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light shadow */
+    text-align: center;
+    font-size: 0.9rem; /* Smaller text */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.subject-box:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* More pronounced shadow effect */
+}
+
+
+.about, .services, .testimonials, .book, .contact {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+#booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#booking-form input, #booking-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#booking-form button {
+    background: #007bff; /* Friendly blue color */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+#booking-form button:hover {
+    background: #0056b3; /* Darker blue color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow effect */
+}
+
+/* Footer Styling */
+footer {
+    background: #007bff; /* Friendly blue background */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+/* About Us Section Styling */
+.about {
+    padding: 4rem 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Founders Grid Styling */
+.founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+/* Founder Item Styling */
+.founder-item {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 200px;
+}
+
+/* Circular Photo Styling */
+.founder-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Founder Info Styling */
+.founder-info {
+    font-size: 0.9rem;
+    color: #333;
+}
+/* General Section Styling */
+.section {
+    padding: 2rem 0; /* Reduced padding */
+    background: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Subject Boxes Container */
+.subject-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid layout */
+    gap: 1rem; /* Space between boxes */
+    justify-content: center;
+}
+
+/* Individual Subject Box Styling */
+.subject-box {
+    background: #ffffff; /* White background */
+    color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #000; /* Black border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 0.9rem; /* Smaller text */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.subject-box:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* More pronounced shadow effect */
+}
+
+/* Specific Section Headers Styling */
+#secondary-schools h2,
+#gcses h2,
+#a-levels h2 {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Reduced margin */
+}
+/* Contact Us Section Styling */
+.contact {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links Container Styling */
+.social-links {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center icons horizontally */
+    margin-top: 1rem;
+}
+
+/* Styling for Each Social Link */
+.social-link {
+    display: inline-flex; /* Allows scaling and center alignment */
+    align-items: center; /* Center the icon within the link */
+    justify-content: center; /* Center the icon within the link */
+    margin: 0 0.5rem; /* Space between icons */
+    transition: transform 0.3s, color 0.3s; /* Transition for scaling and color */
+}
+
+/* Hover Effect for Social Link */
+.social-link:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Styling for Social Icon */
+.social-icon {
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    transition: transform 0.3s; /* Transition for scaling */
+}
+
+/* Optional Hover Effect for Icons */
+.social-link:hover .social-icon {
+    /* If using SVG with fill attribute, the color change might not be needed */
+    filter: none; /* Remove filter to prevent disappearing effect */
+}
+/* General Form Styling */
+#booking-form input, #booking-form textarea, #booking-form select {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+}
+
+/* Custom Dropdown Styling */
+#booking-form select {
+    appearance: none; /* Removes default dropdown arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23333" d="M4 6l4 4 4-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px; /* Adds space for the custom arrow */
+    cursor: pointer;
+}
+
+#booking-form select:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Hover Effect */
+#booking-form select:hover {
+    border-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the submit button */
+#booking-form button {
+    background: #007bff; /* Friendly blue color */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#booking-form button:hover {
+    background: #0056b3; /* Darker blue color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow effect */
+}
+
+/* Disabled Submit Button */
+#booking-form button:disabled {
+    background: #ccc; /* Grey color */
+    cursor: not-allowed;
+    transform: none; /* Remove hover effect transformation */
+    box-shadow: none; /* Remove hover effect shadow */
+}
+
+/* Remove hover effect when button is disabled */
+#booking-form button:disabled:hover {
+    background: #ccc; /* Ensure background stays grey */
+    transform: none; /* No hover effect transformation */
+    box-shadow: none; /* No hover effect shadow */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}
+/* General Form Styles */
+#booking-form .form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#booking-form .form-group .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #007bff; /* Default color for valid input */
+}
+
+#booking-form .form-group input,
+#booking-form .form-group select,
+#booking-form .form-group textarea {
+    padding-right: 2.5rem; /* Space for the icon */
+}
+
+/* Icons for validation */
+#name-icon::before { content: ''; }
+#email-icon::before { content: ''; }
+#phone-icon::before { content: ''; }
+#level-icon::before { content: ''; }
+#message-icon::before { content: ''; }
+
+/* Checkmark and Cross */
+.valid .icon::before {
+    content: '\2714'; /* Unicode checkmark */
+    color: green;
+}
+
+.invalid .icon::before {
+    content: '\2716'; /* Unicode cross */
+    color: red;
+}
+
+/* Disabled Submit Button */
+#booking-form button:disabled {
+    background: #ccc; /* Grey color */
+    cursor: not-allowed;
+}
+
+/* Enabled Submit Button */
+#booking-form button {
+    background: #007bff; /* Friendly blue color */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#booking-form button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow effect */
+}
+.hidden {
+    display: none;
+  }
+/* General styles for status icons */
+.status-icon {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+  }
+  
+  .status-icon.valid {
+    color: green;
+  }
+  
+  .status-icon.invalid {
+    color: red;
+  }
+/* Curvy Box Styling */
+.curvy-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.curvy-box {
+    background: #ffffff; /* Plain white background */
+    border-radius: 15px; /* Rounded corners for curvy effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #007bff; /* Blue border for emphasis */
+    width: 250px;
+    text-align: center;
+    display: inline-block; /* Display boxes inline */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    background-color: #fff; /* Ensure background is white to differ from background */
+}
+
+.curvy-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Deeper shadow on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+}
+
+.curvy-box h2 {
+    margin-bottom: 1rem; /* Space between title and content */
+}
+
+.curvy-box ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 1.5rem; /* Padding for bullets */
+    text-align: left; /* Align text to the left for better readability */
+    margin: 0 auto; /* Center the list */
+    max-width: 200px; /* Max width for the list */
+}
+
+/* Service Boxes Styling (11+, Year 7 to A-Levels) */
+#services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between the boxes */
+    margin: 0 auto; /* Center the boxes */
+    padding: 20px;
+    background-color: #f0f4f8; /* Light background to contrast with white boxes */
+}
+
+#services-container .service-box {
+    width: 250px;
+    background-color: #ffffff; /* Plain white background for contrast */
+    border-radius: 15px;
+    border: 2px solid #007bff; /* Blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+#services-container .service-box:hover {
+    transform: scale(1.05); /* Hover effect to enlarge slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    border-color: #0056b3; /* Darker blue on hover */
+}
+
+#services-container .service-box ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 1.5rem; /* Padding for bullets */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+/* How We Teach Section Styling */
+.how-we-teach {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    transition: box-shadow 0.3s;
+}
+
+.how-we-teach:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Contact Us and Book a Session Specific Styles */
+.contact, .book {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-form, .book-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .book-form input, .contact-form textarea, .book-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form button, .book-form button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover, .book-form button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Ensure Contact Us and Book a Session sections remain unaffected */
+#contact-us, #book-session {
+    margin: 0;
+    padding: 20px;
+    /* Any specific styling for these sections */
+}

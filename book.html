@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEMCORE - Book a Session</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles for tick and cross icons */
+    .status-icon {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2em;
+    }
+    .status-icon.valid {
+      color: green;
+    }
+    .status-icon.invalid {
+      color: red;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding-right: 30px; /* Space for the status icon */
+    }
+    .subject-dropdown {
+      margin-bottom: 1rem;
+    }
+    .subject-dropdown select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="book.html" class="nav-link">Book a Session</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="booking" class="section">
+      <div class="container">
+        <h2>Book a Session</h2>
+        <form id="booking-form" action="https://formspree.io/f/xvgpnywd" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <span class="status-icon" id="name-status"></span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <span class="status-icon" id="email-status"></span>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <span class="status-icon" id="phone-status"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="level">Level:</label>
+            <div class="dropdown-container">
+              <select name="level" id="level" required>
+                <option value="">Select Level</option>
+                <option value="11+">11+</option>
+                <option value="Year 7 to Year 9">Year 7 to Year 9</option>
+                <option value="GCSE">GCSE</option>
+                <option value="A-level">A-level</option>
+              </select>
+              <span class="status-icon" id="level-status"></span>
+            </div>
+          </div>
+          
+          <div id="subjects-container">
+            <div class="form-group subject-dropdown hidden" id="subject-dropdown">
+              <label for="subject">Subject:</label>
+              <div class="dropdown-container">
+                <select name="subject" id="subject" required>
+                  <option value="">Select Subject</option> <!-- Default option -->
+                </select>
+                <span class="status-icon" id="subject-status"></span> <!-- Status icon for subject -->
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+            <!-- No validation icon for message field -->
+          </div>
+
+          <button type="submit" id="submit-button" disabled>Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- New Section: What Happens After This? -->
+    <section id="next-steps" class="section">
+      <div class="container">
+        <h2>What Happens After This?</h2>
+        <p>Once you submit the form, here's what happens next:</p>
+        <ul>
+          <li>We will review your request and match you with the best tutor based on the subject and level you have selected.</li>
+          <li>You will receive an email confirmation with the session details, including the date, time, and tutor information.</li>
+          <li>If any additional information is required, we will reach out to you via the provided email or phone number.</li>
+          <li>After the session is confirmed, you will receive a Zoom or in-person meeting link (if applicable).</li>
+          <li>If you need to reschedule or make any changes, simply reply to the confirmation email, and we’ll assist you.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:stemcorecontact@gmail.com">stemcorecontact@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/stemcore_tutoring/" target="_blank" class="social-link">
+            <img src="iconmonstr-instagram-11.svg" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://www.facebook.com/stemcoretutoring/" target="_blank" class="social-link">
+            <img src="iconmonstr-facebook-4.svg" alt="Facebook" class="social-icon">
+          </a>
+        </div>                
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 STEMCORE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link to external JavaScript file -->
+  <script src="scripts.js"></script>
+</body>
+</html>
