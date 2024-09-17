@@ -641,3 +641,11 @@ footer {
     padding: 20px;
     /* Any specific styling for these sections */
 }
+/* Ensure Contact Us box fits within the viewport on mobile */
+@media (max-width: 768px) {
+    .contact {
+        max-width: 100%; /* Ensures the box doesn't stretch beyond the viewport */
+        box-sizing: border-box; /* Includes padding and border in the element's total width */
+        padding: 1rem; /* Adjust padding for mobile view */
+    }
+}
